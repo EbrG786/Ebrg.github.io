@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://fonts.googleapis.com/css?family=Varela' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Ebrahim's Portfolio</title>
+</head>
+
+<body background=images/leaf.svg>
+    <div class="nav-container">
+        <button class="responsive-nav">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav class="link-container">
+            <ul class="links">
+                <li><a href="#home" class="scroll-links glow">Home</a></li>
+                <li><a href="#about" class="scroll-links glow">About</a></li>
+                <li><a href="#projects" class="scroll-links glow">Project</a></li>
+                <li><a href="#contact" class="scroll-links glow">Contact</a></li>
+                <li><a href="#tours" class="scroll-links glow" style="text-decoration: line-through;">Resume</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="mainbody">
+        <section id="home">
+            <div>
+                <h1 class="font">EBRAHIM</h1>
+                <p class="fontfade">I BUILD THINGS<br> FOR THE WEB.</p>
+                <p>I’m a IT engineering student with experience in Frontend development, UI/UX designing, IOT, Competetive
+                    coding. Currently, I’m focused on creating better and more interactive UI's.</p>
+            </div>
+        </section>
+        <section id="about">
+            <div class="about-container">
+                <p class="glow">ABOUT ME</p>
+                <p>Hello! My name is Ebrahim Ghantiwala and I enjoy creating things that live on the internet.My intrest in
+                    web development started in the first year of my college when I decide to pick up a skill rather than
+                    coding. Started by learning HTML, CSS ,JS for starting and rest is history. Fast forward today I have
+                    had a privilege of working for few companies as an intern for web development.</p>
+                <p>Here are a few tools and technologies I have used recently:</p>
+                <ul>
+                    <li class="tools">PYTHON</li>
+                    <li class="tools">REACT</li>
+                    <li class="tools">DOCKER</li>
+                    <li class="tools">JAVASCRIPT</li>
+                    <li class="tools">FIGMA</li>
+                </ul>
+            </div>
+
+            <div class="img">
+                <img src="./images/self 2.png" alt="Self">
+            </div>
+        </section>
+        <section id="projects">
+            <p  class="glow" >PROJECTS</p>
+            <div class="project-container">
+                <div class="cards">
+                    <div class="text" >E-Commerce Website</div>
+                </div>
+                <div class="cards">
+                    <div class="text">Property Price Predictor</div>
+                </div>
+                <div class="cards">
+                    <div class="text">IOT Website</div>
+                </div>
+                <div class="cards">
+                    <div class="text">Online Counsellor</div>
+                </div>
+                <div class="cards">
+                    <div class="text">Smart Elevator System</div>
+                </div>
+                <div class="cards">
+                    <a target="_blank" class="text link" href="https://www.linkedin.com/in/ebrahim-ghantiwala-1b9b201aa/">And Many More</a>
+                </div>
+            </div>
+        </section>
+        <section class="contact" id="contact">
+            <p  class="glow" >CONTACT ME</a></p>
+            <p>While we’re good with smoke signals,there are simpler ways for us to get in touch and answer any
+                questions.</p>
+            <button> <a href="mailto:ebrahimghantiwala@gmail.com" style="text-decoration: none;">Say Hello</a></button>
+        </section>
+        <div class="contact-details">
+            <a class="email glow">ebrahimghantiwala@gmail.com</a></br>
+            <a target="_blank" href="https://github.com/EbrG786"><img src="images/git.svg" class="icon" alt="logo"></a></br>
+            <a target="_blank" href="https://www.linkedin.com/in/ebrahim-ghantiwala-1b9b201aa/"><img src="images/Linkd.svg" class="icon" alt="logo"></a>
+        </div>
+        <footer>Designed and buit by Ebrahim M Ghantiwala</footer>
+        </ul>
+    </div>
+
+</body>
+
+<script>
+    // ********** close links ************
+    toggleBtn = document.querySelector(".responsive-nav");
+    linkContainer = document.querySelector(".link-container");
+    const links = document.querySelector(".links");
+
+    toggleBtn.addEventListener("click", function () {
+        // linkContainer.classList.toggle("show-links");
+
+        const linksHeight = links.getBoundingClientRect().height;
+        console.log(linksHeight);
+        const linkContainerHeight = linkContainer.getBoundingClientRect().height;
+        console.log(linkContainerHeight);
+
+        if (linkContainerHeight === 0) {
+            linkContainer.style.height = `${linksHeight+20}px`;
+        }
+        else {
+            linkContainer.style.height = 0;
+        }
+    });
+</script>
+
+</html>
